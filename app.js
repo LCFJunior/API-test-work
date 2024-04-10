@@ -1,18 +1,20 @@
 //API's: New York Times API   |   OpenGraph API
 
+//Configurações e constantes
 require('dotenv').config();
 const fetch = require('node-fetch');
 const apiKeyNYT = /*your_key*/;
 const urlNYT = `https://api.nytimes.com/svc/archive/v1/2022/3.json?&api-key=${apiKeyNYT}`;
 
+//Chamada de função da API do New York Times
 fetch(urlNYT)
   .then(response => response.json())
   .then(data => {
     if (data.response && data.response.docs && data.response.docs.length > 0) {
       const randomIndex = Math.floor(Math.random() * data.response.docs.length);
-      const randomArticle = data.response.docs[randomIndex];
+      const randomArticle = data.response.docs[randomIndex]; //Validar apenas um dos artigos
 
-      const articleUrl = randomArticle.web_url;
+      const articleUrl = randomArticle.web_url; 
 
       if (!articleUrl || !articleUrl.startsWith('http')) {
         console.error('Invalid article URL:', articleUrl);

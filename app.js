@@ -21,14 +21,17 @@ fetch(urlNYT)
         return;
       }
 
+      //Criação da URL para integrar as duas API's
       const openGraphUrl = `https://opengraph.io/api/1.1/site/${encodeURIComponent(articleUrl)}?app_id=${process.env.OPENGRAPH_APP_ID}`;
 
+      //Chamada de função da API do OpenGraph
       fetch(openGraphUrl)
         .then(response => response.json())
         .then(data => {
           if (data.error) {
             console.log('Error fetching Open Graph information:', data.error.message);
           } else {
+            //Impressão
             console.log('ㅤㅤㅤㅤㅤㅤ-------------------------------------------------------------------------------------------------------------------------------------------------------------------ㅤㅤㅤㅤㅤㅤ')
             console.log('ㅤ')
             console.log('ㅤTITLE:', data.hybridGraph.title );

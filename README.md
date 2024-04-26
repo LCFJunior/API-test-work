@@ -18,16 +18,20 @@ git clone https://github.com/LCFJunior/API-test-work
 cd API-test-work
 npm install
 ```
+## Put your API New York Times on "const"
 
-## Create a .env file in the root directory and add your API keys
-
+```js
+Const apikeyNYT = "your_key";
 ```
-NYT_API_KEY = your_nyt_api_key_here
+
+## Create a .env file in the root directory and add your API key
+
+```env
 OPENGRAPH_APP_ID = your_opengraph_app_id_here
 ```
 
 ## Usage
 
-```bash
+```npm
 npm start
 ```

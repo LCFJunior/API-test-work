@@ -1,4 +1,5 @@
 # NYT and OpenGraph API Integration
+# ![Logo do Projeto](nytimes.png)
 
 This project demonstrates how to integrate the New York Times API with the OpenGraph API to fetch and display information about a random NYT article.
 

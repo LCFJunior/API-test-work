@@ -34,5 +34,5 @@ OPENGRAPH_APP_ID = your_opengraph_app_id_here
 ## Usage
 
 ```npm
-npm start
+node app.js
 ```
